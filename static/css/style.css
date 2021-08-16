@@ -17,3 +17,12 @@ th,
 td {
     border: 1px solid black;
 }
+input[type = submit] {
+  background-color: orange;
+  border: none;
+  text-decoration: none;
+  color: white;
+  padding: 20px 20px;
+  margin: 20px 20px;
+  cursor: pointer;
+}
