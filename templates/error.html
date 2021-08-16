@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GUI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function foo(msg) {
+            alert(msg);
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="{{ url_for('display')}}" method="post" style="text-align:center;">
+            <strong>Query: </strong>
+            <input type="text" name="Query" placeholder="{{query}}" />
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <script>
+            var a = "{{error | safe}}";
+            foo(a)
+        </script>
+	<a href="/" style="padding-left: 45%;">
+            <button>
+                Home
+            </button>
+        </a>
+    </div>
+</body>
+</html>
