@@ -129,7 +129,7 @@ def display():
             return render_template("error.html",error=e,query=int_features[0])
     except BaseException:
         logging.exception("ERROR")
-        return render_template("error.html",error="Something Went Wrong. Please Check Query Again..!!!",query=int_features[0])
+        return render_template("error.html",error="Something Went Wrong...!!!",query=int_features[0])
 
 if __name__ == '__main__':
     app.run(debug=True)
