@@ -16,9 +16,9 @@
             <input type="text" name="Query" placeholder="Query" />
             <input type="submit" value="Submit">
         </form>
-        <h3 style="text-align: center;">Current Database Structure</h3>
+        <h2 style="text-align: center;">Current Database Structure</h2>
         {% for k in range(n) %}
-        <h4 style="text-align: center;">{{table[k][0]}}</h4>
+        <h3 style="text-align: center;">{{table[k][0]}}</h3>
         <table style="width:70%;padding-left: 30%;">
             <tr>
                 {% for j in column[k] %}
