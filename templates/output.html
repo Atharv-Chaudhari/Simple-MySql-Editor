@@ -18,13 +18,13 @@
         <table style="width:70%;padding-top:5%;padding-left: 30%;">
             <tr>
                 {% for j in col %}
-                <th style="text-align: center;">{{j}}</th>
+                <th style="text-align: center;background-color:#00FF00;">{{j}}</th>
                 {% endfor %}
             </tr>
             {% for data in output %}
             <tr>
                 {% for i in range(n) %}
-                <td style="text-align: center;">{{data[i]}}</td>
+                <td style="text-align: center;background-color:#FFF746;">{{data[i]}}</td>
                 {% endfor %}
             </tr>
             {% endfor %}

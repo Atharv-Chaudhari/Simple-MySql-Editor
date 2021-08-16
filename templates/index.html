@@ -2,34 +2,37 @@
 <html>
 
 <head>
-    <title>GUI</title>
+    <title>Simple SQL Editor</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='css/logo.png') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="container">
+        <h1 style="text-align:center;">Simple SQL Editor</h1>
+        <h2 style="text-align:center;color:#800000;">Please Enter Your Query Here</h2>
         <form action="{{ url_for('display')}}" method="post" style="text-align:center;">
-            <strong>Query: </strong>
-            <input type="text" name="Query" placeholder="Query" />
+            <textarea type="text" name="Query" cols="40" rows="5"></textarea>
+            <br>
             <input type="submit" value="Submit">
         </form>
-        <h2 style="text-align: center;">Current Database Structure</h2>
+        <h2 style="text-align: center;color:#0000CD;">Current Database Structure</h2>
         {% for k in range(n) %}
-        <h3 style="text-align: center;">{{table[k][0]}}</h3>
+        <h3 style="text-align: center;color:red;">{{table[k][0]}}</h3>
         <table style="width:70%;padding-left: 30%;">
             <tr>
                 {% for j in column[k] %}
-                <th style="text-align: center;">{{j[0]}}</th>
+                <th style="text-align: center;background-color:#00FF00;">{{j[0]}}</th>
                 {% endfor %}
             </tr>
             <tr>
                 {% for i in data[k] %}
             <tr>
                 {% for x in i %}
-                <td style="text-align: center;">{{x}}</td>
+                <td style="text-align: center;background-color:#FFF746;">{{x}}</td>
                 {% endfor %}
             </tr>
             {% endfor %}
