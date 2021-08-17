@@ -4,13 +4,16 @@ import mysql.connector
 import html
 import collections
 import logging
+
 app = Flask(__name__)
+
 mydb = mysql.connector.connect(
     host="remotemysql.com",
     user="2gzE8eN5aw",
     password="jySrN6RaPx",
     database="2gzE8eN5aw"
     )
+
 @app.route('/')
 def database():
     mydb = mysql.connector.connect(
