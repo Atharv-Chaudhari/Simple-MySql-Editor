@@ -15,7 +15,7 @@
         <h1 style="text-align:center;">Simple SQL Editor</h1>
         <h2 style="text-align:center;color:#800000;">Please Enter Your Query Here</h2>
         <form action="{{ url_for('display')}}" method="post" style="text-align:center;">
-            <textarea type="text" name="Query" cols="40" rows="5"></textarea>
+            <textarea style="max-width: 50%;" type="text" name="Query" cols="40" rows="5"></textarea>
             <br>
             <input type="submit" value="Submit">
         </form>
