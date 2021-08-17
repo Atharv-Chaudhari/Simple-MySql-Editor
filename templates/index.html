@@ -15,14 +15,14 @@
         <h1 style="text-align:center;">Simple SQL Editor</h1>
         <h2 style="text-align:center;color:#800000;">Please Enter Your Query Here</h2>
         <form action="{{ url_for('display')}}" method="post" style="text-align:center;">
-            <textarea style="max-width: 50%;" type="text" name="Query" cols="40" rows="5"></textarea>
+            <textarea style="max-width: 70%;" type="text" name="Query" cols="40" rows="5"></textarea>
             <br>
             <input type="submit" value="Submit">
         </form>
         <h2 style="text-align: center;color:#0000CD;">Current Database Structure</h2>
         {% for k in range(n) %}
         <h3 style="text-align: center;color:red;">{{table[k][0]}}</h3>
-        <table style="width:70%;padding-left: 30%;">
+        <table style="width:70%;text-align:center;">
             <tr>
                 {% for j in column[k] %}
                 <th style="text-align: center;background-color:#00FF00;">{{j[0]}}</th>
