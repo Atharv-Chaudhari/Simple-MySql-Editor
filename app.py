@@ -130,8 +130,8 @@ def display():
             html.unescape(e)
             e=e.replace("2gzE8eN5aw.","")
             return render_template("error.html",error=e,query=int_features[0])
-    except BaseException:
-        logging.exception("ERROR")
+    except Exception as ex:
+        log_traceback(ex)
         return render_template("error.html",error="Something Went Wrong...!!!",query=int_features[0])
 
 if __name__ == '__main__':
