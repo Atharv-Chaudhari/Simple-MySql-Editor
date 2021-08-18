@@ -31,7 +31,7 @@ input[type = submit] {
   cursor: pointer;
 }
 input[type = submit]:hover {
-  background-color: #4CAF50;
+  background-color: #07ed10;
   color: white;
 }
 .button {
