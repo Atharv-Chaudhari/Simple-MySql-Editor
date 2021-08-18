@@ -11,7 +11,9 @@
 </head>
 <body>
     <div class="container">
-         <form action="{{ url_for('display')}}" method="post" style="text-align:center;">
+        <h1 style="text-align:center;">Simple SQL Editor</h1>
+        <h2 style="text-align:center;color:#800000;">Please Enter Your Query Here</h2>
+        <form action="{{ url_for('display')}}" method="post" style="text-align:center;">
             <textarea type="text" name="Query" style="max-width: 70%;" cols="40" rows="5">{{query}}</textarea>
             <br>
             <input type="submit" value="Submit">
@@ -32,11 +34,13 @@
             {% endfor %}
         </table>
         <br>
-        <a href="/" style="text-align:center;">
-            <button style="text-align:center;" class="button button2">
-                Home
-            </button>
-        </a>
+        <div style="text-align:center;">
+            <a href="/">
+                <button class="button button2">
+                    Home
+                </button>
+            </a>
+         </div>
     </div>
 </body>
 </html>
