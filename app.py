@@ -4,6 +4,7 @@ import mysql.connector
 import html
 import collections
 import logging
+import traceback
 
 app = Flask(__name__)
 
