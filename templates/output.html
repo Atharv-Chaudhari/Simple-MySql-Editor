@@ -11,7 +11,8 @@
     <style>
         body{
             background-image: url("https://wallpapercave.com/uwp/uwp1338511.jpeg");
-            background-size: 100% 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         .container{
             background-image: url("https://raw.githubusercontent.com/Atharv-Chaudhari/Simple-MySql-Editor/3565ab8216aa8c389b946e426fed899aeb3426ea/back.jpg");
@@ -32,13 +33,13 @@
         <table style="text-align:center;margin-left: auto;margin-right: auto;">
             <tr>
                 {% for j in col %}
-                <th style="text-align: center;background-color:#00FF00;">{{j}}</th>
+                <th style="text-align: center;">{{j}}</th>
                 {% endfor %}
             </tr>
             {% for data in output %}
             <tr>
                 {% for i in range(n) %}
-                <td style="text-align: center;background-color:#FFF746;">{{data[i]}}</td>
+                <td style="text-align: center;">{{data[i]}}</td>
                 {% endfor %}
             </tr>
             {% endfor %}
